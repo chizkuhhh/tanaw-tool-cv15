@@ -1,0 +1,6 @@
+tanawVenv/
+.venv/
+annotations/*
+anonymized_frames/*
+extracted_frames/*
+metadata/*

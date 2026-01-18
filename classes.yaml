@@ -1,0 +1,101 @@
+# Traffic Sign Classes
+# DO NOT modify indices - only add new classes at the end
+# Last updated: 2026-01-09
+
+0: No U-Turn
+1: No Right Turn
+2: No Left Turn
+3: 60kph
+4: 40kph
+5: One Way (Left)
+6: Pedestrian Crossing Ahead
+7: Keep Right
+8: Stop
+9: Bike Lane
+10: Give Way
+11: No Entry
+12: No Loading and Unloading Anytime
+13: No Stopping Anytime
+14: No Parking
+15: No Overtaking or Bawal Lumusot
+16: 80kph
+17: 100kph
+18: One Way (Right)
+19: Stop Here On Red Signal
+20: No Right Turn On Red Signal
+21: Do Not Block Intersection
+22: Share The Road or Yield To Peds
+23: Loading and Unloading Zone
+24: PUJ Stop
+25: U-Turn Slot
+26: Traffic Signal Ahead
+27: Pass Either Side
+28: School Children Crossing
+29: Slow Down Accident Prone Area
+30: Bus Lane Only
+31: No Contact Apprehension In Effect
+32: No Loading and Unloading Beyond This Point
+33: Asian Highway Route Marker
+34: Merging Traffic
+35: Right Turner Yield to Bikes
+36: Parking Area
+37: PWD Crossing
+38: 9t
+39: Slow Down School Zone
+40: Bus Loading Area Only
+41: Hospital
+42: Philippine Highway Network
+43: Bus - PUJ Lane
+44: Motorcycle Lane
+45: 30kph
+46: 4.5m
+47: Curve (Left)
+48: 50kph
+49: One Way (Straight)
+50: 20t
+51: Right Turn Only
+52: Roadwork Ahead
+53: Slippery Road
+54: Bus Stop
+55: Right Lane Must Turn Right
+56: 15t
+57: No Motorcycles
+58: Jeepney Stop
+59: Curve (Right)
+60: 20kph
+61: Winding Road
+62: 18t
+63: Landslide-Prone Area
+64: Slow Down
+65: Reduce Speed
+66: Keep Left
+67: Sharp Turn
+68: Telephone
+69: No Pedestrian Crossing or Bawal Tumawid
+70: Approach to Intersection
+71: No Tricycles
+72: 14t
+73: 25kph
+74: 15kph
+75: No Trucks
+76: All Traffic (Right)
+77: Roundabout Ahead (Rotunda)
+78: Approach to Intersection Side Road
+79: No Blowing of Horns
+80: No Parking Variation
+81: Two Way
+82: 10kph
+83: No Cars
+84: Hump
+85: Sharp Turn (Right)
+86: No Turn On Red Signal
+87: Uneven Road
+88: Inner Lane Must Turn Left
+89: Sharp Turn (Left)
+90: Double Curve (Right)
+91: 4.27m
+92: Left Lane Must Turn Left
+93: 4.2m
+94: 60kph (Minimum)
+95: No Waiting Anytime
+96: 10t

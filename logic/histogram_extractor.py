@@ -4,7 +4,7 @@ import numpy as np
 import math
 
 
-def extract_histogram_based(video_path, output_dir, target_distance_m, speed_kph, threshold):
+def extract_histogram_based(video_path, output_dir, target_distance_m, speed_kph, threshold, progress_callback=None):
     """
     Extract frames using histogram-based method
     
@@ -28,6 +28,8 @@ def extract_histogram_based(video_path, output_dir, target_distance_m, speed_kph
     fps = cap.get(cv2.CAP_PROP_FPS)
     if fps <= 0:
         fps = 25  # fallback default
+
+    total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     
     # calculate frame gap
     speed_mps = speed_kph * 1000 / 3600
@@ -66,6 +68,13 @@ def extract_histogram_based(video_path, output_dir, target_distance_m, speed_kph
         
         prev_gray = curr_gray
         frame_counter += 1
+
+        # report progress every 30 frames to avoid too many UI updates
+        if progress_callback and frame_counter % 30 == 0:
+            progress_callback(frame_counter, total_frames)
+        
+    if progress_callback:
+        progress_callback(total_frames, total_frames)
     
     cap.release()
     return saved_frames, None

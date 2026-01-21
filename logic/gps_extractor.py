@@ -4,7 +4,7 @@ import numpy as np
 import gpxpy
 from haversine import haversine
 
-def extract_gps_based(video_path, gpx_path, output_dir, interval):
+def extract_gps_based(video_path, gpx_path, output_dir, interval, progress_callback=None):
     """
     Extract frames using GPS-based method
     
@@ -44,6 +44,9 @@ def extract_gps_based(video_path, gpx_path, output_dir, interval):
     
     query_distances = np.arange(0, distances[-1], interval)
     query_times = np.interp(query_distances, distances, [t.timestamp() for t in timestamps])
+
+    # total frames to extract
+    total_extracts = len(query_times)
     
     # extract frames
     cap = cv2.VideoCapture(video_path)
@@ -73,6 +76,9 @@ def extract_gps_based(video_path, gpx_path, output_dir, interval):
             out_fname = os.path.join(output_dir, f"{video_name}_frame_{idx:04d}.jpg")
             cv2.imwrite(out_fname, frame)
             saved_frames.append(out_fname)
+        
+        if progress_callback:
+            progress_callback(idx + 1, total_extracts)
     
     cap.release()
     return saved_frames, None
